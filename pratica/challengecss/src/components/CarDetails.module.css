@@ -1,0 +1,10 @@
+body{
+    background-color: #111;
+    color: white;
+}
+ul{
+    margin: 20px 0;
+}
+li{
+    padding: 10px;
+}
