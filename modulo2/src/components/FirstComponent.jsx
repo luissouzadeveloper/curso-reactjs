@@ -1,4 +1,5 @@
-// CSS
+// Componente
+import MyComponent from "./MyComponent";
 
 const FirstComponent = () => {
     
@@ -13,6 +14,8 @@ const FirstComponent = () => {
             </div>
 
             {/* Isso é um comentário */}
+
+            <MyComponent />
         </>
     )
 }
