@@ -1,4 +1,8 @@
+// CSS
+
 const FirstComponent = () => {
+    
+    // Função return
     return (
         <>
             <div>
@@ -7,6 +11,8 @@ const FirstComponent = () => {
             <div>
                 <p className="teste">JSX</p>
             </div>
+
+            {/* Isso é um comentário */}
         </>
     )
 }
