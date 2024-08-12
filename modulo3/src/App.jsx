@@ -6,6 +6,7 @@ import ImageReact from './assets/react-logo.png'
 
 // Componentes
 import ManagerData from './components/ManagerData'
+import ListRender from './components/ListRender'
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
 
       {/* Hooks - useState */}
       <ManagerData />
+
+      {/* Renderização de listas */}
+      <ListRender />
     </>
   )
 }
