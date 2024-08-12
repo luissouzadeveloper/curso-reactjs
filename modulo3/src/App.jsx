@@ -4,6 +4,9 @@ import './App.css'
 // Imagens
 import ImageReact from './assets/react-logo.png'
 
+// Componentes
+import ManagerData from './components/ManagerData'
+
 function App() {
 
   return (
@@ -17,6 +20,9 @@ function App() {
       <div>
         <img src={ImageReact} alt="React logo" />
       </div>
+
+      {/* Hooks - useState */}
+      <ManagerData />
     </>
   )
 }
