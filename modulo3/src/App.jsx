@@ -9,6 +9,7 @@ import ManagerData from './components/ManagerData'
 import ListRender from './components/ListRender'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
+import CarDetails from './components/CarDetails'
 
 function App() {
 
@@ -35,6 +36,9 @@ function App() {
 
       {/* Props */}
       <ShowUserName name='Luis' />
+
+      {/* Props destructuring */}
+      <CarDetails brand='VW' km={15000} color='Azul' />
     </>
   )
 }
