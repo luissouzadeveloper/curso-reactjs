@@ -12,6 +12,7 @@ import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
 import Fragments from './components/Fragments'
 import Container from './components/Container'
+import ExecuteFunction from './components/ExecuteFunction'
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
     {id: 2, brand: 'Chevrolet', color: 'Preto', newCar: '', km: 2000},
     {id: 3, brand: 'Ford', color: 'Azul', newCar: '', km: 30000},
   ];
+
+  function showMessege() {
+    console.log('Função em prop')
+  }
 
   return (
     <>
@@ -64,6 +69,9 @@ function App() {
       <Container myValue={20}>
         <p>Parágrafo</p>
       </Container>
+
+      {/* Funções em prop */}
+      <ExecuteFunction myFunction={showMessege} />
     </>
   )
 }
