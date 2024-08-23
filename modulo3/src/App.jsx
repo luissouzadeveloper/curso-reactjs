@@ -11,6 +11,7 @@ import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
 import Fragments from './components/Fragments'
+import Container from './components/Container'
 
 function App() {
 
@@ -58,6 +59,11 @@ function App() {
 
       {/* Fragaments */}
       <Fragments propFragment='Fragments' />
+
+      {/* Prop Children */}
+      <Container myValue={20}>
+        <p>Parágrafo</p>
+      </Container>
     </>
   )
 }
