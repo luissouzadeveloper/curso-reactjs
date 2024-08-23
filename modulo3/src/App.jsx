@@ -13,6 +13,9 @@ import CarDetails from './components/CarDetails'
 import Fragments from './components/Fragments'
 import Container from './components/Container'
 import ExecuteFunction from './components/ExecuteFunction'
+import { useState } from 'react'
+import Messege from './components/Messege'
+import ChangeMessegeState from './components/ChangeMessegeState'
 
 function App() {
 
@@ -24,6 +27,12 @@ function App() {
 
   function showMessege() {
     console.log('Função em prop')
+  }
+
+  const [messege, setMessege] = useState("");
+
+  const handleMessege = (msg) => {
+    setMessege(msg);
   }
 
   return (
@@ -72,6 +81,10 @@ function App() {
 
       {/* Funções em prop */}
       <ExecuteFunction myFunction={showMessege} />
+
+      {/* State lift */}
+      <Messege msg={messege}/>
+      <ChangeMessegeState handleMessege={handleMessege} />
     </>
   )
 }
