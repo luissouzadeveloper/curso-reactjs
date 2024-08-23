@@ -16,13 +16,14 @@ import ExecuteFunction from './components/ExecuteFunction'
 import { useState } from 'react'
 import Messege from './components/Messege'
 import ChangeMessegeState from './components/ChangeMessegeState'
+import UserDetails from './components/UserDetails'
 
 function App() {
 
   const cars = [
-    {id: 1, brand: 'Ferrari', color: 'Vermelha', newCar: '', km: 0},
-    {id: 2, brand: 'Chevrolet', color: 'Preto', newCar: '', km: 2000},
-    {id: 3, brand: 'Ford', color: 'Azul', newCar: '', km: 30000},
+    { id: 1, brand: 'Ferrari', color: 'Vermelha', newCar: '', km: 0 },
+    { id: 2, brand: 'Chevrolet', color: 'Preto', newCar: '', km: 2000 },
+    { id: 3, brand: 'Ford', color: 'Azul', newCar: '', km: 30000 },
   ];
 
   function showMessege() {
@@ -34,6 +35,12 @@ function App() {
   const handleMessege = (msg) => {
     setMessege(msg);
   }
+
+  const persons = [
+    { id: 1, name: 'José', age: 20, job: 'Programador' },
+    { id: 2, name: 'Ana', age: 19, job: 'Jornalista' },
+    { id: 3, name: 'Mário', age: 40, job: 'Empresário' },
+  ]
 
   return (
     <>
@@ -83,8 +90,13 @@ function App() {
       <ExecuteFunction myFunction={showMessege} />
 
       {/* State lift */}
-      <Messege msg={messege}/>
+      <Messege msg={messege} />
       <ChangeMessegeState handleMessege={handleMessege} />
+
+      {/* Atividade modulo 3 */}
+      {persons.map((users) => (
+        <UserDetails key={users.id} name={users.name} age={users.age} job={users.job} />
+      ))}
     </>
   )
 }
