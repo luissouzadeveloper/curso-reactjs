@@ -1,6 +1,14 @@
+.container{
+    border: 1px solid blue;
+    margin: 10px;
+    text-align: center;
+}
+
+.container_ul{
+    padding: 10px;
+}
+
 .list_li {
-    padding: 10px 0;
     color: blue;
     list-style: none;
-    border: 2px solid red;
 }
