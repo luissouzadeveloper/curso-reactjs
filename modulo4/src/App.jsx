@@ -11,7 +11,9 @@ function App() {
 
   const n = 15;
 
-  const [name] = useState('José')
+  const [name] = useState('José');
+
+  const redTitle = false;
 
   return (
     <>
@@ -31,6 +33,11 @@ function App() {
       <h2 style={n < 20 ? {color: 'purple'} : {color: 'yellow'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem animi hic pariatur nobis eius facilis cum nemo praesentium tenetur, iste quia illum numquam ipsa dicta quidem officiis similique, dolore temporibus?</h2>
 
       <h2 style={name === 'zé' ? {color: 'purple'} : null}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem animi hic pariatur nobis eius facilis cum nemo praesentium tenetur, iste quia illum numquam ipsa dicta quidem officiis similique, dolore temporibus?</h2>
+
+      {/* Classe dinâmica */}
+      <p className={redTitle ? 'red-title' : 'title'}>
+        Esse parágrafo terá classe dinâmica
+      </p>
     </>
   )
 }

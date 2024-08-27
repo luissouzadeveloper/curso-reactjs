@@ -7,3 +7,14 @@
 h1{
   color: red;
 }
+
+.red-title{
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  border: 2px solid gold;
+}
+.title{
+  background-color: #000;
+  color: green;
+}
