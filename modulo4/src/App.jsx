@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 // Componentes
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
       <p className={redTitle ? 'red-title' : 'title'}>
         Esse parágrafo terá classe dinâmica
       </p>
+
+      {/* CSS modules */}
+      <Title />
     </>
   )
 }
