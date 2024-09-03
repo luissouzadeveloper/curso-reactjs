@@ -11,6 +11,8 @@ const MyForm = (user) => {
     const [name, setName] = useState(user ? user.name : '');
     const [email, setEmail] = useState(user ? user.email : '');
 
+    const [bio, setBio] = useState('');
+
     const handleName = (event) => {
         setName(event.target.value);
     };
@@ -21,7 +23,7 @@ const MyForm = (user) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Eviando formulário');
-        console.log(name, email);
+        console.log(name, email, bio);
 
         // 7 - limpar formulário
         setName('')
@@ -45,6 +47,12 @@ const MyForm = (user) => {
                 </label>
 
                 {/* 5- envio de form */}
+
+                {/* Textarea */}
+                <label htmlFor="bio">
+                    <span>Bio:</span>
+                    <textarea name="bio" placeholder='Descrição' onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
+                </label>
 
                 <input type="submit" value="Enviar" />
             </form>
