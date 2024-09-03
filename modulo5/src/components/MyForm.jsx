@@ -22,6 +22,10 @@ const MyForm = (user) => {
         event.preventDefault();
         console.log('Eviando formulário');
         console.log(name, email);
+
+        // 7 - limpar formulário
+        setName('')
+        setEmail('')
     }
 
     return (
